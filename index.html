@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lê Đăng Khanh – Yến Sào Ngọc Đăng</title>
+<meta name="description" content="Lê Đăng Khanh, nhà sáng lập Yến Sào Ngọc Đăng. Tổ yến nguyên bản – dưỡng chất thiên nhiên thuần khiết.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Layout: một cột hẹp, ưu tiên điện thoại; khối xanh đậm xen khối nền sáng; thanh liên hệ cố định ở đáy */
+  --green:#0E4434;
+  --green-2:#14583F;
+  --gold:#C9A24A;
+  --gold-soft:#F3EAD4;
+  --ink:#1B2621;
+  --muted:#5C6B64;
+  --paper:#F7F8F6;
+  --line:#DDE3DF;
+  --font:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.65;padding-bottom:84px}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.2;text-wrap:balance;margin:0}
+h2{font-size:1.5rem;font-weight:800;color:var(--green)}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+
+/* Đầu trang */
+.hero{background:var(--green);color:#fff;padding:40px 0 44px}
+.hero .wrap{display:grid;gap:22px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand svg{width:64px;height:64px;flex:none}
+.brand span{font-size:.82rem;line-height:1.4;color:#CFE0D8}
+.hero h1{font-size:clamp(2rem,7vw,2.8rem);font-weight:800;letter-spacing:-.01em}
+.role{font-size:1.02rem;color:#DCE8E2;margin-top:6px}
+.quote{border-left:3px solid var(--gold);padding:4px 0 4px 16px;font-size:1.15rem;font-weight:600;color:var(--gold-soft);max-width:34ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:700;text-decoration:none;font-size:.98rem;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}
+.btn-gold{background:var(--gold);color:var(--green)}
+.btn-gold:hover{background:#D6B262}
+.btn-line{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.08)}
+
+/* Ba con số */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:-22px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 14px;box-shadow:0 6px 18px rgba(14,68,52,.07)}
+.stat b{display:block;font-size:1.15rem;font-weight:800;color:var(--green);line-height:1.25}
+.stat small{display:block;color:var(--muted);font-size:.84rem;line-height:1.45;margin-top:4px}
+@media (max-width:560px){.stats{grid-template-columns:1fr}}
+
+section{padding:44px 0}
+section .wrap{display:grid;gap:16px}
+.story p{margin:0;max-width:62ch}
+.story .sig{font-weight:700;color:var(--green)}
+
+.list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.list li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.tick{flex:none;width:22px;height:22px;border-radius:50%;background:var(--green);color:var(--gold);display:grid;place-items:center;font-size:.8rem;font-weight:800;margin-top:2px}
+
+.dark{background:var(--green);color:#fff}
+.dark h2{color:#fff}
+.products{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.products div{border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:14px;font-weight:600}
+.products div small{display:block;font-weight:400;color:#CFE0D8;font-size:.85rem;margin-top:2px}
+.note{font-size:.88rem;color:#CFE0D8}
+
+.who{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.who div{background:var(--gold-soft);border-radius:12px;padding:12px 14px;font-weight:600;color:var(--green)}
+@media (max-width:420px){.products,.who{grid-template-columns:1fr}}
+.disclaimer{font-size:.88rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+
+.channels{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;padding:10px 16px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:600;text-decoration:none;color:var(--green)}
+.chip:hover{border-color:var(--green)}
+
+.contact{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+.card h3{font-size:1rem;color:var(--green)}
+.card .num{font-size:1.25rem;font-weight:800;font-variant-numeric:tabular-nums;margin:4px 0 8px}
+.card .links{display:flex;gap:14px;font-weight:600;font-size:.95rem}
+.card .links a{color:var(--green-2)}
+@media (max-width:560px){.contact{grid-template-columns:1fr}}
+.meta{color:var(--muted);font-size:.95rem;display:grid;gap:4px}
+
+footer{padding:24px 0 8px;color:var(--muted);font-size:.85rem;text-align:center}
+
+/* Thanh cố định */
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 18px rgba(0,0,0,.06);padding:10px 12px calc(10px + env(safe-area-inset-bottom));z-index:10}
+.bar .wrap{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0}
+.bar a{display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:12px;padding:8px 6px;text-decoration:none;font-weight:700;font-size:.95rem;line-height:1.25}
+.bar a small{font-weight:500;font-size:.78rem;opacity:.9}
+.bar .z{background:var(--green);color:#fff}
+.bar .c{background:var(--gold);color:var(--green)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <svg viewBox="0 0 64 64" role="img" aria-label="Biểu tượng Yến Sào Ngọc Đăng">
+        <circle cx="32" cy="32" r="31" fill="#0B3A2C" stroke="#C9A24A" stroke-width="2"/>
+        <circle cx="32" cy="32" r="25" fill="none" stroke="#C9A24A" stroke-width=".8" opacity=".7"/>
+        <path d="M16 36c6-1 10-4 16-10 4 5 9 8 16 9-6 3-11 4-16 3-5 1-10 0-16-2z" fill="#C9A24A"/>
+        <path d="M24 42c5 2 11 2 16 0" stroke="#C9A24A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span>Công ty TNHH MTV<br><strong style="color:#fff">Yến Sào Ngọc Đăng</strong></span>
+    </div>
+    <div>
+      <p class="eyebrow" style="margin:0 0 6px">Nhà sáng lập</p>
+      <h1>Lê Đăng Khanh</h1>
+      <p class="role" style="margin-bottom:0">Theo nghề yến từ 2019 · Sơ chế, tinh chế theo ISO 22000:2018</p>
+    </div>
+    <p class="quote" style="margin:0">Tổ yến nguyên bản – dưỡng chất thiên nhiên thuần khiết.</p>
+    <div class="cta">
+      <a class="btn btn-gold" href="https://zalo.me/0869069690" target="_blank" rel="noopener">Nhắn Zalo tư vấn</a>
+      <a class="btn btn-line" href="https://yensaongocdang.com" target="_blank" rel="noopener">Xem sản phẩm &amp; giá</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><b>Từ 2019</b><small>7 năm theo nghề yến, từ xây nhà yến đến tinh chế</small></div>
+    <div class="stat"><b>ISO 22000:2018</b><small>Chứng nhận an toàn thực phẩm, hiệu lực đến 07/2028</small></div>
+    <div class="stat"><b>Kiểm hàng khi nhận</b><small>Đổi trả trong 7 ngày theo chính sách</small></div>
+  </div>
+</div>
+
+<section class="story">
+  <div class="wrap">
+    <p class="eyebrow" style="margin:0">Câu chuyện của tôi</p>
+    <h2>Yến nhà, làm từ gốc</h2>
+    <p>Năm 2019, tôi cùng những người thợ nhiều năm kinh nghiệm bắt đầu xây dựng nhà yến. Năm 2021, đội ngũ Ngọc Đăng được đào tạo nghề tinh chế. Từ đó, chúng tôi tự tay sơ chế, nhặt lông và tinh chế toàn bộ sản phẩm bán ra.</p>
+    <p>Điều tôi muốn mang đến rất đơn giản: yến nhà, không pha trộn, rõ nguồn gốc, giá hợp lý.</p>
+    <p class="sig">— Lê Đăng Khanh</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow" style="margin:0">Cam kết</p>
+    <h2>Bốn điều Ngọc Đăng giữ</h2>
+    <ul class="list">
+      <li><span class="tick">1</span><span>Yến thuần Việt, không dùng yến nhập trôi nổi.</span></li>
+      <li><span class="tick">2</span><span>Không pha trộn, không tẩy trắng, không tẩm đường, không chất bảo quản.</span></li>
+      <li><span class="tick">3</span><span>Sơ chế, tinh chế và đóng gói theo hệ thống ISO 22000:2018.</span></li>
+      <li><span class="tick">4</span><span>Giá công khai trên website, khách được kiểm hàng trước khi nhận.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <p class="eyebrow" style="margin:0">Sản phẩm</p>
+    <h2>Các dòng yến của Ngọc Đăng</h2>
+    <div class="products">
+      <div>Yến thô<small>Tổ yến nguyên bản sau thu hoạch</small></div>
+      <div>Yến tinh chế<small>Đã nhặt lông, làm sạch, sấy khô</small></div>
+      <div>Yến chưng tươi<small>Chưng sẵn, tiện dùng mỗi ngày</small></div>
+      <div>Hộp quà yến sào<small>Quà sức khỏe cho người thân, đối tác</small></div>
+    </div>
+    <p class="note" style="margin:0">Giá, khuyến mãi và đặt hàng xem tại website chính thức.</p>
+    <div class="cta"><a class="btn btn-gold" href="https://yensaongocdang.com" target="_blank" rel="noopener">Vào yensaongocdang.com</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow" style="margin:0">Dùng cho ai</p>
+    <h2>Món bồi bổ cho cả nhà</h2>
+    <div class="who">
+      <div>Người lớn tuổi</div>
+      <div>Phụ nữ mang thai, sau sinh</div>
+      <div>Trẻ nhỏ đang lớn</div>
+      <div>Người làm việc căng thẳng</div>
+    </div>
+    <p class="disclaimer" style="margin:0">Yến sào là thực phẩm, không phải là thuốc và không thay thế thuốc chữa bệnh. Người đang điều trị bệnh nên hỏi ý kiến bác sĩ trước khi dùng.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow" style="margin:0">Xem livestream &amp; theo dõi</p>
+    <h2>Kênh chính thức của Ngọc Đăng</h2>
+    <div class="channels">
+      <a class="chip" href="https://www.facebook.com/YenSaoNgocDang/" target="_blank" rel="noopener">Facebook</a>
+      <a class="chip" href="https://www.tiktok.com/@yensaongocdang" target="_blank" rel="noopener">TikTok</a>
+      <a class="chip" href="https://www.youtube.com/@YenSaoNgocDang" target="_blank" rel="noopener">YouTube</a>
+      <a class="chip" href="https://zalo.me/1742202757767858013" target="_blank" rel="noopener">Zalo OA</a>
+      <a class="chip" href="https://yensaongocdang.com" target="_blank" rel="noopener">Website</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow" style="margin:0">Liên hệ</p>
+    <h2>Trò chuyện với Ngọc Đăng</h2>
+    <div class="contact">
+      <div class="card">
+        <h3>Nhi Lê · Tư vấn &amp; bán hàng</h3>
+        <div class="num">0869 069 690</div>
+        <div class="links"><a href="https://zalo.me/0869069690" target="_blank" rel="noopener">Nhắn Zalo</a><a href="tel:0869069690">Gọi</a></div>
+      </div>
+      <div class="card">
+        <h3>Anh Khanh · Nhà sáng lập</h3>
+        <div class="num">0902 284 049</div>
+        <div class="links"><a href="https://zalo.me/0902284049" target="_blank" rel="noopener">Nhắn Zalo</a><a href="tel:0902284049">Gọi</a></div>
+      </div>
+    </div>
+    <div class="meta">
+      <span>Email: yensaongocdang@gmail.com</span>
+      <span>Địa chỉ: Số 143 Đường 30/4, ấp Cầu Quan, Xã Tân Hòa, Tỉnh Vĩnh Long</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Lê Đăng Khanh · Công ty TNHH MTV Yến Sào Ngọc Đăng</div>
+</footer>
+
+<nav class="bar" aria-label="Liên hệ nhanh">
+  <div class="wrap">
+    <a class="z" href="https://zalo.me/0869069690" target="_blank" rel="noopener">Nhắn Zalo<small>Nhi Lê</small></a>
+    <a class="c" href="tel:0869069690">Gọi ngay<small>0869 069 690</small></a>
+  </div>
+</nav>
+
+</body>
+</html>
